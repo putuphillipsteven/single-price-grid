@@ -1,0 +1,116 @@
+$primary-cyan: hsl(179, 62%, 43%);
+$primary-cyan1: hsl(179, 62%, 50%);
+$primary-bright-yellow: hsl(71, 73%, 54%);
+$neutral-light-grey: hsl(204, 43%, 93%);
+$neutral-greyish-blue: hsl(218, 22%, 67%);
+$font: "Karla", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $neutral-light-grey;
+  color: white;
+}
+
+main.container {
+  max-width: 600px;
+  min-height: 380px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.top,
+.left,
+.right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.top {
+  padding: 24px;
+}
+
+.left,
+.right {
+  padding: 24px;
+}
+.top {
+  background-color: white;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: $primary-cyan;
+  }
+  h2 {
+    font-size: 16px;
+    color: $primary-bright-yellow;
+    font-weight: 700;
+  }
+  p {
+    font-weight: 400;
+    color: $neutral-greyish-blue;
+  }
+}
+
+.left {
+  background-color: $primary-cyan;
+  h2 {
+    font-size: 16px;
+  }
+  .price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h1 {
+      font-size: 32px;
+      margin-right: 16px;
+    }
+    h2 {
+      color: $neutral-light-grey;
+      font-weight: lighter;
+    }
+  }
+  .btn {
+    width: 100%;
+    border: none;
+    font-weight: 700;
+    background-color: $primary-bright-yellow;
+    padding: 14px;
+  }
+}
+
+.right {
+  background-color: $primary-cyan1;
+  h1 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  p {
+    width: 90%;
+    font-size: 16px;
+    color: $neutral-light-grey;
+    font-weight: 400;
+  }
+}
+
+$breakpoint-mobile: 460px;
+@media (max-width: $breakpoint-mobile) {
+  body {
+    min-height: 100vh;
+  }
+  main {
+    max-width: 365px;
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+  color: white;
+}
+
+main.container {
+  max-width: 600px;
+  min-height: 380px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.top,
+.left,
+.right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.top {
+  padding: 24px;
+}
+
+.left,
+.right {
+  padding: 24px;
+}
+
+.top {
+  background-color: white;
+}
+.top h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(179, 62%, 43%);
+}
+.top h2 {
+  font-size: 16px;
+  color: hsl(71, 73%, 54%);
+  font-weight: 700;
+}
+.top p {
+  font-weight: 400;
+  color: hsl(218, 22%, 67%);
+}
+
+.left {
+  background-color: hsl(179, 62%, 43%);
+}
+.left h2 {
+  font-size: 16px;
+}
+.left .price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.left .price h1 {
+  font-size: 32px;
+  margin-right: 16px;
+}
+.left .price h2 {
+  color: hsl(204, 43%, 93%);
+  font-weight: lighter;
+}
+.left .btn {
+  width: 100%;
+  border: none;
+  font-weight: 700;
+  background-color: hsl(71, 73%, 54%);
+  padding: 8px;
+}
+
+.right {
+  background-color: hsl(179, 62%, 50%);
+}
+.right h1 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.right p {
+  width: 90%;
+  font-size: 16px;
+  color: hsl(204, 43%, 93%);
+  font-weight: 400;
+}
+
+@media (max-width: 460px) {
+  body {
+    padding: 16px 0;
+  }
+  main.container {
+    max-width: 320px;
+    min-height: 600px;
+  }
+  .bottom {
+    flex-direction: column;
+    min-height: 400px;
+  }
+  .left {
+    min-height: 120px;
+  }
+  .right {
+    min-height: 120px;
+  }
+} /*# sourceMappingURL=styles.css.map */
